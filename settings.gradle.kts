@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "nowinjetpack"
 include(":app")
- 
+include(":common")
+include(":base")
