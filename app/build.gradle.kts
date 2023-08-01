@@ -40,8 +40,8 @@ android {
 
 dependencies {
 
-    val retrofit_version = "2.9.0"
-    val koin_version = "3.1.5"
+    //TODO: Future - Improvements libs.versions.toml and organize in specific modules
+
     val navigation_version = "2.4.1"
 
     // AndroidX
@@ -56,17 +56,6 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // Koin
-    implementation("io.insert-koin:koin-android:$koin_version")
-    implementation("io.insert-koin:koin-android-compat:$koin_version")
-    // Koin for JUnit 4
-    implementation("io.insert-koin:koin-test-junit4:$koin_version")
-
-    //Retrofit
-    implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
-    implementation("com.squareup.retrofit2:converter-moshi:$retrofit_version")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
-
     // Material
     implementation("com.google.android.material:material:1.8.0")
 
@@ -77,4 +66,15 @@ dependencies {
 
     implementation(project(":common"))
     implementation(project(":base"))
+
+    // Koin
+    implementation(libs.koin)
+    implementation(libs.koin.android.compat)
+    implementation(libs.koin.test.junit)
+    // Retrofit
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.moshi)
+    implementation(libs.retrofit.okhttp3)
+    // Moshi
+    implementation(libs.moshi)
 }
