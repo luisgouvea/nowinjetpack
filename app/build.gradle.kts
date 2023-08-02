@@ -56,25 +56,13 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    // Material
-    implementation("com.google.android.material:material:1.8.0")
-
-    // Tests
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
-    implementation(project(":common"))
-    implementation(project(":base"))
+    implementation(project(":core:common"))
+    implementation(project(":core:network"))
+    implementation(project(":core:data"))
 
     // Koin
     implementation(libs.koin)
     implementation(libs.koin.android.compat)
     implementation(libs.koin.test.junit)
-    // Retrofit
-    implementation(libs.retrofit.core)
-    implementation(libs.retrofit.moshi)
-    implementation(libs.retrofit.okhttp3)
-    // Moshi
-    implementation(libs.moshi)
+
 }

@@ -17,3 +17,7 @@ rootProject.name = "nowinjetpack"
 include(":app")
 include(":common")
 include(":base")
+include(":core")
+include(":core:data")
+include(":core:network")
+include(":core:common")
