@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".MarvelActivity"
+            android:exported="false"
+            android:label="@string/title_activity_marvel"
+            android:theme="@style/Theme.Nowinjetpack">
+            <intent-filter>
+<!--                <action android:name="${applicationId}.marvel.MarvelActivity" />-->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <provider
+            android:name=".MarvelInitialization"
+            android:authorities="${applicationId}.marvel"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

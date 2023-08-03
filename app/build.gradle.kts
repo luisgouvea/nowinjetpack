@@ -46,10 +46,10 @@ dependencies {
 
     // AndroidX
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-common:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
+//    implementation("androidx.lifecycle:lifecycle-common:2.4.1")
+//    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+//    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
     implementation("androidx.navigation:navigation-fragment-ktx:$navigation_version")
     implementation("androidx.navigation:navigation-ui-ktx:$navigation_version")
     implementation("androidx.core:core-ktx:1.9.0")
@@ -59,6 +59,8 @@ dependencies {
     implementation(project(":core:common"))
     implementation(project(":core:network"))
     implementation(project(":core:data"))
+    implementation(project(":core:domain"))
+    implementation(project(":feature:marvel"))
 
     // Koin
     implementation(libs.koin)

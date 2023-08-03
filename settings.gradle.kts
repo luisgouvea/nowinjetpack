@@ -15,9 +15,12 @@ dependencyResolutionManagement {
 
 rootProject.name = "nowinjetpack"
 include(":app")
-include(":common")
-include(":base")
 include(":core")
 include(":core:data")
 include(":core:network")
 include(":core:common")
+include(":core:model")
+include(":core:domain")
+include(":feature")
+include(":feature:deliveries")
+include(":feature:marvel")

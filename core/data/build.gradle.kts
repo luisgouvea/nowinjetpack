@@ -38,6 +38,14 @@ dependencies {
 
     implementation(project(":core:common"))
     implementation(project(":core:network"))
+    implementation(project(":core:model"))
+
+    // Koin
+    implementation(libs.koin)
+    implementation(libs.koin.android.compat)
+    implementation(libs.koin.test.junit)
+
+
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
