@@ -3,7 +3,7 @@ package com.example.core.data.repository
 import com.example.core.common.extensions.async
 import com.example.core.data.mapper.DeliveriesMapper
 import com.example.core.model.data.Delivery
-import com.example.core.network.NijNetworkDataSourceImpl
+import com.example.nowinjetpack.core.network.NijNetworkDataSourceImpl
 
 /**
  * Implementation of the [DeliveriesRepository] that retrieves the news resources from API.

@@ -1,4 +1,4 @@
-package com.example.core.network.model
+package com.example.nowinjetpack.core.network.model
 
 import com.squareup.moshi.Json
 

@@ -1,7 +1,7 @@
-package com.example.core.network
+package com.example.nowinjetpack.core.network
 
-import com.example.core.network.model.DeliveryResponse
-import com.example.core.network.retrofit.RetrofitNijNetwork
+import com.example.nowinjetpack.core.network.model.DeliveryResponse
+import com.example.nowinjetpack.core.network.retrofit.RetrofitNijNetwork
 
 
 class NijNetworkDataSourceImpl(

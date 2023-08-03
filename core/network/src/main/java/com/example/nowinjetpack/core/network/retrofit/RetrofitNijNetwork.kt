@@ -1,7 +1,7 @@
-package com.example.core.network.retrofit
+package com.example.nowinjetpack.core.network.retrofit
 
-import com.example.core.network.NijNetworkDataSource
-import com.example.core.network.model.DeliveryResponse
+import com.example.nowinjetpack.core.network.NijNetworkDataSource
+import com.example.nowinjetpack.core.network.model.DeliveryResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient

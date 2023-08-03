@@ -1,4 +1,4 @@
-package com.example.core.network.di
+package com.example.nowinjetpack.core.network.di
 
 
 import com.squareup.moshi.Moshi

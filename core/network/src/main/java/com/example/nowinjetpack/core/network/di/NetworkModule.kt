@@ -1,9 +1,9 @@
-package com.example.core.network.di
+package com.example.nowinjetpack.core.network.di
 
 import com.example.network.BuildConfig
-import com.example.core.network.NijNetworkDataSource
-import com.example.core.network.NijNetworkDataSourceImpl
-import com.example.core.network.retrofit.RetrofitNijNetwork
+import com.example.nowinjetpack.core.network.NijNetworkDataSource
+import com.example.nowinjetpack.core.network.NijNetworkDataSourceImpl
+import com.example.nowinjetpack.core.network.retrofit.RetrofitNijNetwork
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
