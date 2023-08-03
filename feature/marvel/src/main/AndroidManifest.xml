@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name=".MarvelActivity"
+            android:name="com.example.nowinjetpack.feature.marvel.MarvelActivity"
             android:exported="false"
             android:label="@string/title_activity_marvel"
             android:theme="@style/Theme.Nowinjetpack">

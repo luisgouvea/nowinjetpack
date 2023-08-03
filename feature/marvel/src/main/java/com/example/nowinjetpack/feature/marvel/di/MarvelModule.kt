@@ -1,7 +1,7 @@
-package com.example.nowinjetpack.marvel.di
+package com.example.nowinjetpack.feature.marvel.di
 
 
-import com.example.nowinjetpack.marvel.MarvelViewModel
+import com.example.nowinjetpack.feature.marvel.MarvelViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

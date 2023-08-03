@@ -1,4 +1,4 @@
-package com.example.nowinjetpack.marvel
+package com.example.nowinjetpack.feature.marvel
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

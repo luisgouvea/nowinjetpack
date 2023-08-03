@@ -1,4 +1,4 @@
-package com.example.nowinjetpack.marvel
+package com.example.nowinjetpack.feature.marvel
 
 import org.junit.Test
 

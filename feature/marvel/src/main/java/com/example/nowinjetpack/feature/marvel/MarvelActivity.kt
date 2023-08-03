@@ -1,4 +1,4 @@
-package com.example.nowinjetpack.marvel
+package com.example.nowinjetpack.feature.marvel
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
