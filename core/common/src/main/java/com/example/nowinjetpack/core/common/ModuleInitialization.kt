@@ -1,4 +1,4 @@
-package com.example.core.common
+package com.example.nowinjetpack.core.common
 
 import android.content.ContentProvider
 import android.content.ContentValues

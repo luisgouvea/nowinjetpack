@@ -1,4 +1,4 @@
-package com.example.core.common.route.common
+package com.example.nowinjetpack.core.common.route.common
 
 import android.content.Intent
 

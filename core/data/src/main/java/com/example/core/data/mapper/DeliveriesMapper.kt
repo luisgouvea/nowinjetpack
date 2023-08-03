@@ -1,6 +1,6 @@
 package com.example.core.data.mapper
 
-import com.example.core.common.mapper.DomainMapper
+import com.example.nowinjetpack.core.common.mapper.DomainMapper
 import com.example.nowinjetpack.core.model.data.Delivery
 import com.example.nowinjetpack.core.network.model.DeliveryResponse
 

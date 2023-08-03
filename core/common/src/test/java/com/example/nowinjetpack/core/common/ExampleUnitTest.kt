@@ -1,4 +1,4 @@
-package com.example.core.common
+package com.example.nowinjetpack.core.common
 
 import org.junit.Test
 

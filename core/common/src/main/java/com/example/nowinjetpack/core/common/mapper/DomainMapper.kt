@@ -1,4 +1,4 @@
-package com.example.core.common.mapper
+package com.example.nowinjetpack.core.common.mapper
 
 interface DomainMapper<in T, out Model> {
     fun toDomain(from: T): Model

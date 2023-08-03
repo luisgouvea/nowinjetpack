@@ -1,4 +1,4 @@
-package com.example.core.common.extensions
+package com.example.nowinjetpack.core.common.extensions
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

@@ -2,7 +2,7 @@ package com.example.nowinjetpack
 
 import android.app.Application
 import androidx.lifecycle.LifecycleObserver
-import com.example.core.common.ModuleInitializer
+import com.example.nowinjetpack.core.common.ModuleInitializer
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

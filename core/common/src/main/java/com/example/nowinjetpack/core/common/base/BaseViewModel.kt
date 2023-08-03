@@ -1,4 +1,4 @@
-package com.example.core.common.base
+package com.example.nowinjetpack.core.common.base
 
 
 import androidx.lifecycle.LiveData
