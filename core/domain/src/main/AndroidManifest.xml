@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <application>
-        <provider
-            android:name=".DomainInitialization"
-            android:authorities="com.example.core.domain"
-            android:enabled="true"
-            android:exported="false" />
-    </application>
-
 </manifest>

@@ -1,7 +1,7 @@
-package com.example.network.retrofit
+package com.example.core.network.retrofit
 
-import com.example.network.NijNetworkDataSource
-import com.example.network.model.DeliveryResponse
+import com.example.core.network.NijNetworkDataSource
+import com.example.core.network.model.DeliveryResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -13,10 +13,11 @@ import retrofit2.converter.moshi.MoshiConverterFactory
  */
 class RetrofitNijNetwork(
     okHttpClient: OkHttpClient,
+    nijBaseUrl: String
 ) : NijNetworkDataSource {
 
     private val networkApi = Retrofit.Builder()
-        .baseUrl(NijBaseUrl)
+        .baseUrl(nijBaseUrl)
         .client(okHttpClient)
         .addConverterFactory(
             MoshiConverterFactory.create(

@@ -13,6 +13,10 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+
+        buildFeatures.buildConfig = true
+        buildConfigField("String", "BASE_URL", "\"https://gateway.marvel.com/\"")
+
     }
 
     buildTypes {

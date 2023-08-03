@@ -1,6 +1,6 @@
-package com.example.network
+package com.example.core.network
 
-import com.example.network.model.DeliveryResponse
+import com.example.core.network.model.DeliveryResponse
 
 
 /**
