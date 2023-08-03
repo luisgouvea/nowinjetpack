@@ -1,4 +1,4 @@
-package com.example.core.domain
+package com.example.nowinjetpack.core.domain
 
 import org.junit.Test
 

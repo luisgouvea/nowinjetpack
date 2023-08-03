@@ -1,7 +1,7 @@
-package com.example.core.domain.di
+package com.example.nowinjetpack.core.domain.di
 
 
-import com.example.core.domain.DeliveryUseCase
+import com.example.nowinjetpack.core.domain.DeliveryUseCase
 import org.koin.dsl.module
 
 val domainModule = module {
