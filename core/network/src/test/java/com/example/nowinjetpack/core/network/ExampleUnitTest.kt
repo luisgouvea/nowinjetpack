@@ -1,4 +1,4 @@
-package com.example.network
+package com.example.nowinjetpack.core.network
 
 import org.junit.Test
 
