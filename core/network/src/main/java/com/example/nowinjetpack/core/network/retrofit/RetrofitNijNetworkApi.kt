@@ -1,21 +1,23 @@
 package com.example.nowinjetpack.core.network.retrofit
 
 import com.example.nowinjetpack.core.network.model.DeliveryResponse
+import com.example.nowinjetpack.core.network.model.SeriesResponse
 import kotlinx.serialization.Serializable
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 
 /**
- * Retrofit API declaration for NIA Network API
+ * Retrofit API declaration for NIJ Network API
  */
 internal interface RetrofitNijNetworkApi {
-    @GET("/v1/public/characters")
-    suspend fun getCharacters(
-        @Query("limit") limit: Int,
-        @Query("offset") offset: Int,
-        @Query("nameStartsWith") term: String?
-    ): Unit
+
+
+    @GET("/v1/public/characters/{id}/comics")
+    suspend fun getComics(
+        @Path("id") id: Int
+    ): SeriesResponse
 
     @GET("/meuspedidos/v2/listagem")
     suspend fun getDeliveries(

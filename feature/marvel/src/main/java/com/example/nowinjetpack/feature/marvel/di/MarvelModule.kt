@@ -6,5 +6,5 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val marvelModule = module {
-    viewModel { MarvelViewModel(get()) }
+    viewModel { MarvelViewModel(get(), get()) }
 }

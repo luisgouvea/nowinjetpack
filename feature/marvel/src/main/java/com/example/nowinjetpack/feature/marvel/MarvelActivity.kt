@@ -17,12 +17,17 @@ class MarvelActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setUpViewModel()
+        viewModel.fetchSeries()
     }
 
     private fun setUpViewModel() {
-        viewModel.deliveries.observe(this) {
-            println(it)
+        with(viewModel) {
+            deliveries.observe(this@MarvelActivity) {
+                println(it)
+            }
+            serie.observe(this@MarvelActivity) {
+                println(it)
+            }
         }
-        viewModel.fetchDeliveries()
     }
 }

@@ -1,6 +1,7 @@
 package com.example.nowinjetpack.core.network
 
 import com.example.nowinjetpack.core.network.model.DeliveryResponse
+import com.example.nowinjetpack.core.network.model.SeriesResponse
 
 
 /**
@@ -8,4 +9,6 @@ import com.example.nowinjetpack.core.network.model.DeliveryResponse
  */
 interface NijNetworkDataSource {
     suspend fun fetchDeliveries(page: Int): List<DeliveryResponse>
+
+    suspend fun fetchSeries(page: Int): SeriesResponse
 }
