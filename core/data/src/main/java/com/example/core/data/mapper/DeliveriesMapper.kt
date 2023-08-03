@@ -1,7 +1,7 @@
 package com.example.core.data.mapper
 
 import com.example.core.common.mapper.DomainMapper
-import com.example.core.model.data.Delivery
+import com.example.nowinjetpack.core.model.data.Delivery
 import com.example.nowinjetpack.core.network.model.DeliveryResponse
 
 class DeliveriesMapper : DomainMapper<DeliveryResponse, Delivery> {

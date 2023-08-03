@@ -1,7 +1,7 @@
 package com.example.core.domain
 
 import com.example.core.data.repository.DeliveriesRepository
-import com.example.core.model.data.Delivery
+import com.example.nowinjetpack.core.model.data.Delivery
 
 //
 //class DeliveryUseCase(

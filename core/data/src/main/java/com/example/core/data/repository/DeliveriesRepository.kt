@@ -1,6 +1,6 @@
 package com.example.core.data.repository
 
-import com.example.core.model.data.Delivery
+import com.example.nowinjetpack.core.model.data.Delivery
 
 
 interface DeliveriesRepository {

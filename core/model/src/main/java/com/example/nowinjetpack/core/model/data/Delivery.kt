@@ -1,4 +1,4 @@
-package com.example.core.model.data
+package com.example.nowinjetpack.core.model.data
 
 data class Delivery(
     val date: String?,
