@@ -1,7 +1,7 @@
-package com.example.core.data.repository
+package com.example.nowinjetpack.core.data.repository
 
 import com.example.nowinjetpack.core.common.extensions.async
-import com.example.core.data.mapper.DeliveriesMapper
+import com.example.nowinjetpack.core.data.mapper.DeliveriesMapper
 import com.example.nowinjetpack.core.model.data.Delivery
 import com.example.nowinjetpack.core.network.NijNetworkDataSourceImpl
 

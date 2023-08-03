@@ -1,4 +1,4 @@
-package com.example.core.data.repository
+package com.example.nowinjetpack.core.data.repository
 
 import com.example.nowinjetpack.core.model.data.Delivery
 

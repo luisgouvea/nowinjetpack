@@ -1,6 +1,6 @@
 package com.example.nowinjetpack.core.domain
 
-import com.example.core.data.repository.DeliveriesRepository
+import com.example.nowinjetpack.core.data.repository.DeliveriesRepository
 import com.example.nowinjetpack.core.model.data.Delivery
 
 //

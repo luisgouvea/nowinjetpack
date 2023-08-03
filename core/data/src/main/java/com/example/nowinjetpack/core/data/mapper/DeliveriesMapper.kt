@@ -1,4 +1,4 @@
-package com.example.core.data.mapper
+package com.example.nowinjetpack.core.data.mapper
 
 import com.example.nowinjetpack.core.common.mapper.DomainMapper
 import com.example.nowinjetpack.core.model.data.Delivery

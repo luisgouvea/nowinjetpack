@@ -1,8 +1,8 @@
-package com.example.core.data.di
+package com.example.nowinjetpack.core.data.di
 
-import com.example.core.data.mapper.DeliveriesMapper
-import com.example.core.data.repository.DeliveriesRepository
-import com.example.core.data.repository.DeliveriesRepositoryImpl
+import com.example.nowinjetpack.core.data.mapper.DeliveriesMapper
+import com.example.nowinjetpack.core.data.repository.DeliveriesRepository
+import com.example.nowinjetpack.core.data.repository.DeliveriesRepositoryImpl
 import com.example.nowinjetpack.core.network.NijNetworkDataSource
 import com.example.nowinjetpack.core.network.NijNetworkDataSourceImpl
 import org.koin.dsl.module
