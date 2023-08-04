@@ -1,6 +1,7 @@
 package com.example.nowinjetpack.feature.marvel
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nowinjetpack.marvel.databinding.ActivityMarvelBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -17,7 +18,7 @@ class MarvelActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setUpViewModel()
-        viewModel.fetchSeries()
+        requestSeries()
     }
 
     private fun setUpViewModel() {
@@ -26,8 +27,12 @@ class MarvelActivity : AppCompatActivity() {
                 println(it)
             }
             serie.observe(this@MarvelActivity) {
-                println(it)
+                binding.tvTest.text = it.data.results[0].title
             }
         }
+    }
+
+    private fun requestSeries() {
+        viewModel.fetchSeries()
     }
 }

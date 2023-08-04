@@ -1,7 +1,7 @@
 package com.example.nowinjetpack.core.network.retrofit
 
 import com.example.nowinjetpack.core.network.model.DeliveryResponse
-import com.example.nowinjetpack.core.network.model.SeriesResponse
+import com.example.nowinjetpack.core.network.model.ResultSeriesResponse
 import kotlinx.serialization.Serializable
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -17,7 +17,7 @@ internal interface RetrofitNijNetworkApi {
     @GET("/v1/public/characters/{id}/comics")
     suspend fun getComics(
         @Path("id") id: Int
-    ): SeriesResponse
+    ): ResultSeriesResponse
 
     @GET("/meuspedidos/v2/listagem")
     suspend fun getDeliveries(

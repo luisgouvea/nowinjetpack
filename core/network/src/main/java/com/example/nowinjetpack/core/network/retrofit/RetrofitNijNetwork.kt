@@ -2,7 +2,7 @@ package com.example.nowinjetpack.core.network.retrofit
 
 import com.example.nowinjetpack.core.network.NijNetworkDataSource
 import com.example.nowinjetpack.core.network.model.DeliveryResponse
-import com.example.nowinjetpack.core.network.model.SeriesResponse
+import com.example.nowinjetpack.core.network.model.ResultSeriesResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -35,7 +35,7 @@ class RetrofitNijNetwork(
     override suspend fun fetchDeliveries(page: Int): List<DeliveryResponse> =
         networkApi.getDeliveries(page)
 
-    override suspend fun fetchSeries(id: Int): SeriesResponse =
+    override suspend fun fetchSeries(id: Int): ResultSeriesResponse =
         networkApi.getComics(id)
 
 }
