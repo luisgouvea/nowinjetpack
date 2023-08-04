@@ -3,10 +3,10 @@ package com.example.nowinjetpack.feature.marvel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.nowinjetpack.core.common.base.BaseViewModel
-import com.example.nowinjetpack.core.data.model.ResultSeries
 import com.example.nowinjetpack.core.domain.DeliveryUseCase
 import com.example.nowinjetpack.core.domain.SerieUseCase
 import com.example.nowinjetpack.core.model.data.Delivery
+import com.example.nowinjetpack.core.model.data.ResultSeries
 
 
 class MarvelViewModel(

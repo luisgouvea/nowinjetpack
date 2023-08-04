@@ -2,7 +2,7 @@ package com.example.nowinjetpack.core.data.repository
 
 import com.example.nowinjetpack.core.common.extensions.async
 import com.example.nowinjetpack.core.data.mapper.ResultSeriesMapper
-import com.example.nowinjetpack.core.data.model.ResultSeries
+import com.example.nowinjetpack.core.model.data.ResultSeries
 import com.example.nowinjetpack.core.network.NijNetworkDataSourceImpl
 
 class SerieRepositoryImpl(
