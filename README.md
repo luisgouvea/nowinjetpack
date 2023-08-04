@@ -1,1 +1,3 @@
 # nowinjetpack
+
+//TODO: Gradle organization
