@@ -27,7 +27,7 @@ class MarvelViewModel(
     }
 
     fun fetchSeries() {
-        launch {
+        launch2 {
             _serie.postValue(serieUseCase.fetchSerie())
         }
     }

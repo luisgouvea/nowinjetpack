@@ -1,10 +1,12 @@
 package com.example.nowinjetpack.feature.marvel
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nowinjetpack.marvel.databinding.ActivityMarvelBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
+private const val SHOW_CONTENT = 0
+private const val SHOW_LOADER = 1
 
 class MarvelActivity : AppCompatActivity() {
 
@@ -23,6 +25,9 @@ class MarvelActivity : AppCompatActivity() {
 
     private fun setUpViewModel() {
         with(viewModel) {
+            loading.observe(this@MarvelActivity) { loading ->
+                binding.marvelFlipper.displayedChild = if (loading) SHOW_LOADER else SHOW_CONTENT
+            }
             deliveries.observe(this@MarvelActivity) {
                 println(it)
             }
