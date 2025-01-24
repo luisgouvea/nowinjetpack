@@ -4,7 +4,7 @@
 
 * MVVM
 * Multi-Module
-* Koin
+* Hilt
 * Any Flavor (only debug and prod build type)
 * Coroutines
 * LiveData
