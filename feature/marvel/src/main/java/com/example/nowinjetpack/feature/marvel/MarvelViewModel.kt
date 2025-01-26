@@ -7,9 +7,11 @@ import com.example.nowinjetpack.core.domain.DeliveryUseCase
 import com.example.nowinjetpack.core.domain.SerieUseCase
 import com.example.nowinjetpack.core.model.data.Delivery
 import com.example.nowinjetpack.core.model.data.ResultSeries
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-
-class MarvelViewModel(
+@HiltViewModel
+class MarvelViewModel @Inject constructor(
     private val deliveryUseCase: DeliveryUseCase,
     private val serieUseCase: SerieUseCase
 ): BaseViewModel() {

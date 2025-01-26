@@ -11,7 +11,7 @@ import retrofit2.http.Query
 /**
  * Retrofit API declaration for NIJ Network API
  */
-internal interface RetrofitNijNetworkApi {
+interface RetrofitNijNetworkApi {
 
 
     @GET("/v1/public/characters/{id}/comics")

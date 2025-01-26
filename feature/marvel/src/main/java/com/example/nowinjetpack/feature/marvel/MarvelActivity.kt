@@ -1,18 +1,20 @@
 package com.example.nowinjetpack.feature.marvel
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nowinjetpack.marvel.databinding.ActivityMarvelBinding
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 private const val SHOW_CONTENT = 0
 private const val SHOW_LOADER = 1
 
+@AndroidEntryPoint
 class MarvelActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMarvelBinding
 
-    private val viewModel: MarvelViewModel by viewModel()
+    private val viewModel: MarvelViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

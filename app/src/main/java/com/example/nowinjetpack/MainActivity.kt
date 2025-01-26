@@ -3,7 +3,6 @@ package com.example.nowinjetpack
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.nowinjetpack.core.common.route.vipBenefitsIntent
 import com.example.nowinjetpack.databinding.ActivityMainBinding
 import com.example.nowinjetpack.feature.marvel.MarvelActivity
 

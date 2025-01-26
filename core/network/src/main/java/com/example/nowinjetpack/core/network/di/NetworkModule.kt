@@ -4,18 +4,18 @@ import com.example.network.BuildConfig
 import com.example.nowinjetpack.core.network.NijNetworkDataSource
 import com.example.nowinjetpack.core.network.NijNetworkDataSourceImpl
 import com.example.nowinjetpack.core.network.retrofit.RetrofitNijNetwork
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
-import okhttp3.Response
-import okhttp3.Interceptor
 import java.security.MessageDigest
 import java.util.concurrent.TimeUnit
 
 
 val networkModule = module {
     single { createOkHttpClient() }
-    single { RetrofitNijNetwork(get(), BuildConfig.BASE_URL) }
+    single { RetrofitNijNetwork(get()) }
     single { NijNetworkDataSourceImpl(get()) }
     single<NijNetworkDataSource> { NijNetworkDataSourceImpl(get()) }
 }
