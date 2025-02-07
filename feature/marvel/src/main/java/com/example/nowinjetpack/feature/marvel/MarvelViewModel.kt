@@ -2,7 +2,7 @@ package com.example.nowinjetpack.feature.marvel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.nowinjetpack.core.domain.SerieUseCaseNew
+import com.example.nowinjetpack.core.domain.SerieUseCase
 import com.example.nowinjetpack.core.model.data.ResultSeries
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
@@ -12,12 +12,12 @@ import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 @HiltViewModel
-class NewMarvelViewModel @Inject constructor(
-    private val serieUseCaseNew: SerieUseCaseNew
+class MarvelViewModel @Inject constructor(
+    private val serieUseCase: SerieUseCase
 ): ViewModel() {
 
     val uiSerieState: StateFlow<NewsFeedUiState> =
-        serieUseCaseNew.fetchSerie()
+        serieUseCase.fetchSerie()
             .map { NewsFeedUiState.Success(it) }
             .stateIn(
                 scope = viewModelScope,

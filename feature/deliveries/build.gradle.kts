@@ -43,6 +43,8 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":core:model"))
 
+    implementation(libs.activity.compose)
+
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)

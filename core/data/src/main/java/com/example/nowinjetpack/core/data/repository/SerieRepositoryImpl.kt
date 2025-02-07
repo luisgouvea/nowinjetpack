@@ -7,10 +7,10 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class SerieRepositoryImplNew @Inject constructor(
+class SerieRepositoryImpl @Inject constructor(
     private val mapper: ResultSeriesMapper,
     private val nijNetworkDataSourceImpl: NijNetworkDataSource
-) : SerieRepositoryNew {
+) : SerieRepository {
 
     override fun fetchSerie(id: Int): Flow<ResultSeries> = flow {
         emit(

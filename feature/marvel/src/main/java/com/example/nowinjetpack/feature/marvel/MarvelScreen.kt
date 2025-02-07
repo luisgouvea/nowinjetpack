@@ -17,7 +17,7 @@ import androidx.compose.runtime.getValue
 
 @Composable
 fun MarvelRoute(
-    viewModel: NewMarvelViewModel = hiltViewModel()
+    viewModel: MarvelViewModel = hiltViewModel()
 ) {
     val title by viewModel.uiSerieState.collectAsStateWithLifecycle()
     MarvelScreen(title)
