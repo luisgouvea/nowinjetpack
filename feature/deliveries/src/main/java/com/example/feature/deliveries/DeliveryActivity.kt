@@ -3,11 +3,13 @@ package com.example.feature.deliveries
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.feature.deliveries.databinding.ActivityDeliveryBinding
+import androidx.activity.viewModels
+
 class DeliveryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDeliveryBinding
 
-    private val viewModel: DeliveriesViewModel by viewModel()
+    private val viewModel: DeliveriesViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
