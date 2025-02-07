@@ -1,4 +1,4 @@
-package com.example.nowinjetpack.ui.theme
+package com.example.nowinjetpack.feature.marvel
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,12 +12,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun HelloRoute() {
-    HelloScreen()
+fun MarvelRoute() {
+    MarvelScreen()
 }
 
 @Composable
-fun HelloScreen() {
+fun MarvelScreen() {
     Scaffold {
         Box(modifier = Modifier
             .fillMaxSize()
@@ -32,6 +32,6 @@ fun HelloScreen() {
 
 @Preview
 @Composable
-fun HelloScreenPreview() {
-    HelloScreen()
+fun MarvelScreenPreview() {
+    MarvelScreen()
 }

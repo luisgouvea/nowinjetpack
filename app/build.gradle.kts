@@ -67,9 +67,6 @@ dependencies {
     kapt(libs.hilt.android.compiler)
 
     implementation(libs.lifecycle.viewmodel)
-    implementation(libs.activity)
-
-    implementation(libs.core.ktx)
 
     // Compose
     val composeBom = platform("androidx.compose:compose-bom:2025.01.01")
@@ -77,6 +74,7 @@ dependencies {
     api(libs.androidx.compose.material3)
     api(libs.androidx.compose.ui.tooling.preview)
     debugApi(libs.androidx.compose.ui.tooling)
+    implementation(libs.activity.compose)
 
 }
 

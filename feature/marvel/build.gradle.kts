@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -38,6 +39,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        compose = true
     }
     packaging {
         resources {
@@ -53,9 +55,24 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":core:model"))
 
+
+    implementation(libs.lifecycle.viewmodel)
+
+    //Check if it is necessary
+    //implementation(libs.activity)
+    //implementation(libs.core.ktx)
+
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+
+    // Compose
+    val composeBom = platform("androidx.compose:compose-bom:2025.01.01")
+    implementation(composeBom)
+    api(libs.androidx.compose.material3)
+    api(libs.androidx.compose.ui.tooling.preview)
+    debugApi(libs.androidx.compose.ui.tooling)
+    implementation(libs.activity.compose)
 
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -64,11 +81,6 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
 
-    implementation(libs.lifecycle.viewmodel)
-
-    implementation(libs.activity)
-
-    implementation(libs.core.ktx)
 
 
 }
