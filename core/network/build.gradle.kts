@@ -57,11 +57,6 @@ dependencies {
     implementation(libs.retrofit.moshi)
     implementation(libs.retrofit.okhttp3)
 
-    // Koin
-    implementation(libs.koin)
-    implementation(libs.koin.android.compat)
-    implementation(libs.koin.test.junit)
-
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)

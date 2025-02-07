@@ -3,8 +3,6 @@ package com.example.feature.deliveries
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.feature.deliveries.databinding.ActivityDeliveryBinding
-import org.koin.androidx.viewmodel.ext.android.viewModel
-
 class DeliveryActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDeliveryBinding

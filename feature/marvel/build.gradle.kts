@@ -53,12 +53,6 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":core:model"))
 
-    // Koin
-    implementation(libs.koin)
-    implementation(libs.koin.android.compat)
-    implementation(libs.koin.test.junit)
-    implementation(libs.core.ktx)
-
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)

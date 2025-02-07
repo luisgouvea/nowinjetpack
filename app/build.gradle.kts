@@ -59,11 +59,6 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":feature:marvel"))
 
-    // Koin
-    implementation(libs.koin)
-    implementation(libs.koin.android.compat)
-    implementation(libs.koin.test.junit)
-
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
