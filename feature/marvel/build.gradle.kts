@@ -60,6 +60,10 @@ dependencies {
     implementation(libs.koin.test.junit)
     implementation(libs.core.ktx)
 
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
@@ -71,11 +75,6 @@ dependencies {
 
     val activity_version = "1.6.1"
     implementation("androidx.activity:activity-ktx:$activity_version")
-
-    // Hilt
-    val hilt_version = "2.47"
-    implementation ("com.google.dagger:hilt-android:$hilt_version")
-    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
     implementation(libs.core.ktx)
 

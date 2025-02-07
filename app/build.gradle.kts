@@ -65,13 +65,9 @@ dependencies {
     implementation(libs.koin.android.compat)
     implementation(libs.koin.test.junit)
 
-
-    implementation(libs.lifecycle.viewmodel)
-
     // Hilt
-    val hilt_version = "2.47"
-    implementation ("com.google.dagger:hilt-android:$hilt_version")
-    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
     implementation(libs.lifecycle.viewmodel)
 

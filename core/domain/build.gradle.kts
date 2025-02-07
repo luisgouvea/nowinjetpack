@@ -47,8 +47,7 @@ dependencies {
     implementation(libs.core.ktx)
 
     // Hilt
-    val hilt_version = "2.47"
-    implementation ("com.google.dagger:hilt-android:$hilt_version")
+    implementation(libs.hilt.android)
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
