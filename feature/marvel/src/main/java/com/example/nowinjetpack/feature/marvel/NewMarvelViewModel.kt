@@ -1,20 +1,10 @@
 package com.example.nowinjetpack.feature.marvel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.nowinjetpack.core.common.base.BaseViewModel
-import com.example.nowinjetpack.core.data.repository.SerieRepository
-import com.example.nowinjetpack.core.data.repository.SerieRepositoryNew
-import com.example.nowinjetpack.core.domain.DeliveryUseCase
-import com.example.nowinjetpack.core.domain.SerieUseCase
 import com.example.nowinjetpack.core.domain.SerieUseCaseNew
-import com.example.nowinjetpack.core.model.data.Delivery
 import com.example.nowinjetpack.core.model.data.ResultSeries
-import com.example.nowinjetpack.core.model.data.ResultSeriesData
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
