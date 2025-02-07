@@ -62,9 +62,12 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":feature:marvel"))
 
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     implementation(libs.lifecycle.viewmodel)
 
@@ -75,6 +78,9 @@ dependencies {
     api(libs.androidx.compose.ui.tooling.preview)
     debugApi(libs.androidx.compose.ui.tooling)
     implementation(libs.activity.compose)
+    implementation(libs.androidx.lifecycle.runtimeCompose)
+    implementation(libs.androidx.lifecycle.viewModelCompose)
+    implementation(libs.androidx.compose.runtime)
 
 }
 

@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.example.nowinjetpack.marvel"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 26
@@ -58,13 +58,12 @@ dependencies {
 
     implementation(libs.lifecycle.viewmodel)
 
-    //Check if it is necessary
-    //implementation(libs.activity)
-    //implementation(libs.core.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     // Compose
     val composeBom = platform("androidx.compose:compose-bom:2025.01.01")
@@ -73,6 +72,9 @@ dependencies {
     api(libs.androidx.compose.ui.tooling.preview)
     debugApi(libs.androidx.compose.ui.tooling)
     implementation(libs.activity.compose)
+    implementation(libs.androidx.lifecycle.runtimeCompose)
+    implementation(libs.androidx.lifecycle.viewModelCompose)
+    implementation(libs.androidx.compose.runtime)
 
     implementation(libs.appcompat)
     implementation(libs.material)

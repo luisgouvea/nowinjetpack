@@ -4,6 +4,8 @@ import com.example.nowinjetpack.core.data.repository.DeliveriesRepository
 import com.example.nowinjetpack.core.data.repository.DeliveriesRepositoryImpl
 import com.example.nowinjetpack.core.data.repository.SerieRepository
 import com.example.nowinjetpack.core.data.repository.SerieRepositoryImpl
+import com.example.nowinjetpack.core.data.repository.SerieRepositoryImplNew
+import com.example.nowinjetpack.core.data.repository.SerieRepositoryNew
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -16,6 +18,11 @@ abstract class DataModuleHilt {
     abstract fun bindSerieRepositoryImplNova(
         serieRepositoryImpl: SerieRepositoryImpl
     ): SerieRepository
+
+    @Binds
+    abstract fun bindSerieRepositoryImplHum(
+        serieRepositoryImplNew: SerieRepositoryImplNew
+    ): SerieRepositoryNew
 
     @Binds
     abstract fun bindQualquer(
