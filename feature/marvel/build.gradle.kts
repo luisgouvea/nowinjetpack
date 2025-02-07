@@ -53,7 +53,6 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":core:model"))
 
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     // Koin
     implementation(libs.koin)
     implementation(libs.koin.android.compat)
@@ -73,8 +72,7 @@ dependencies {
 
     implementation(libs.lifecycle.viewmodel)
 
-    val activity_version = "1.6.1"
-    implementation("androidx.activity:activity-ktx:$activity_version")
+    implementation(libs.activity)
 
     implementation(libs.core.ktx)
 

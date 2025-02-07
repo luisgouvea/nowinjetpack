@@ -52,7 +52,6 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:$navigation_version")
     implementation("androidx.navigation:navigation-ui-ktx:$navigation_version")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation(project(":core:common"))
     implementation(project(":core:network"))
@@ -70,9 +69,7 @@ dependencies {
     kapt(libs.hilt.android.compiler)
 
     implementation(libs.lifecycle.viewmodel)
-
-    val activity_version = "1.6.1"
-    implementation("androidx.activity:activity-ktx:$activity_version")
+    implementation(libs.activity)
 
     implementation(libs.core.ktx)
 

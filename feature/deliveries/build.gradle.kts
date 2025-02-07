@@ -43,7 +43,6 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":core:model"))
 
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     // Koin
     implementation(libs.koin)
     implementation(libs.koin.android.compat)
