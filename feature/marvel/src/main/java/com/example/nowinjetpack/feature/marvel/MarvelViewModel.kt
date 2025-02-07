@@ -7,7 +7,10 @@ import com.example.nowinjetpack.core.domain.DeliveryUseCase
 import com.example.nowinjetpack.core.domain.SerieUseCase
 import com.example.nowinjetpack.core.model.data.Delivery
 import com.example.nowinjetpack.core.model.data.ResultSeries
+import com.example.nowinjetpack.core.model.data.ResultSeriesData
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
 @HiltViewModel
@@ -19,8 +22,8 @@ class MarvelViewModel @Inject constructor(
     private val _deliveries = MutableLiveData<List<Delivery>>()
     val deliveries: LiveData<List<Delivery>> = _deliveries
 
-    private val _serie = MutableLiveData<ResultSeries>()
-    val serie: LiveData<ResultSeries> = _serie
+    private val _uiSerieState = MutableStateFlow(ResultSeries(data = ResultSeriesData(emptyList())))
+    val uiSerieState: StateFlow<ResultSeries> = _uiSerieState
 
     fun fetchDeliveries() {
         launch() {
@@ -30,7 +33,7 @@ class MarvelViewModel @Inject constructor(
 
     fun fetchSeries() {
         launch2 {
-            _serie.postValue(serieUseCase.fetchSerie())
+            _uiSerieState.value = serieUseCase.fetchSerie()
         }
     }
 }
