@@ -49,13 +49,8 @@ dependencies {
 
     // AndroidX
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-//    implementation("androidx.lifecycle:lifecycle-common:2.4.1")
-//    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-//    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
     implementation("androidx.navigation:navigation-fragment-ktx:$navigation_version")
     implementation("androidx.navigation:navigation-ui-ktx:$navigation_version")
-//    implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
@@ -72,8 +67,6 @@ dependencies {
 
 
     implementation(libs.lifecycle.viewmodel)
-
-    //implementation ("androidx.activity:activity-ktx:1.9.0")
 
     // Hilt
     val hilt_version = "2.47"

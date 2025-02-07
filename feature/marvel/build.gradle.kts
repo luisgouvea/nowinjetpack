@@ -69,9 +69,6 @@ dependencies {
 
     implementation(libs.lifecycle.viewmodel)
 
-    //implementation ("androidx.activity:activity-ktx:1.6.1")
-    //implementation("androidx.core:core-ktx:1.15.0")
-
     val activity_version = "1.6.1"
     implementation("androidx.activity:activity-ktx:$activity_version")
 
