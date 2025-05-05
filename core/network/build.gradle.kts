@@ -18,8 +18,8 @@ android {
 
         buildFeatures.buildConfig = true
         buildConfigField("String", "BASE_URL", "\"https://gateway.marvel.com/\"")
-        buildConfigField("String", "API_PRIVATE", "\"5f017a133f8c9622e6ff5761328e366310c5ddf1\"")
-        buildConfigField("String", "API_PUBLIC", "\"6c9c0da2607c3ff1fbfdbf4da338a98d\"")
+        buildConfigField("String", "API_PRIVATE", "\"9535d3e8e7f454b7c3971a4df01c4ff17c0065bf\"")
+        buildConfigField("String", "API_PUBLIC", "\"3d7e68f5eb6f588693e79091d7b8704b\"")
 
     }
 

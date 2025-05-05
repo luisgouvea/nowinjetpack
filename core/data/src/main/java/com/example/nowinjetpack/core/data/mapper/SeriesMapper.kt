@@ -13,6 +13,7 @@ class SeriesMapper @Inject constructor():
 
     override fun toDomain(from: SeriesResponse): Series {
         return Series(
+            id = from.id,
             title = from.title
         )
     }

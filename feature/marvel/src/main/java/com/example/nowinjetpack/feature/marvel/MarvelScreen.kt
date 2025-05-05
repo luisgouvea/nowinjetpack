@@ -39,7 +39,7 @@ fun MarvelScreen(text: NewsFeedUiState) {
                 }
 
                 is NewsFeedUiState.Success -> {
-                    text.feed?.data?.results?.let { listSeries ->
+                    text.feed?.data?.let { listSeries ->
                         if (listSeries.isNotEmpty()) {
                             val title = listSeries[0].title
                             Text(text = title)

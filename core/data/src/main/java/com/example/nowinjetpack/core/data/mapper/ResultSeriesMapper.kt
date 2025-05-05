@@ -12,7 +12,7 @@ class ResultSeriesMapper @Inject constructor(): DomainMapper<ResultSeriesRespons
 
     override fun toDomain(from: ResultSeriesResponse): ResultSeries {
         return ResultSeries(
-            data = ResultSeriesDataMapper().toDomain(from.data)
+            data = SeriesMapper().toDomain(from.data)
         )
     }
 }

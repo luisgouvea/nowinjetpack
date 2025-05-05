@@ -65,6 +65,10 @@ dependencies {
     kapt(libs.hilt.android.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
+    // Testing
+    api(libs.kotlinx.coroutines.test)
+    api(libs.kotlin.test)
+
     // Compose
     val composeBom = platform("androidx.compose:compose-bom:2025.01.01")
     implementation(composeBom)
