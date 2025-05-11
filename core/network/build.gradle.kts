@@ -17,7 +17,7 @@ android {
         consumerProguardFiles("consumer-rules.pro")
 
         buildFeatures.buildConfig = true
-        buildConfigField("String", "BASE_URL", "\"https://gateway.marvel.com/\"")
+        buildConfigField("String", "BASE_URL", "\"https://jsonplaceholder.typicode.com/\"")
         buildConfigField("String", "API_PRIVATE", "\"9535d3e8e7f454b7c3971a4df01c4ff17c0065bf\"")
         buildConfigField("String", "API_PUBLIC", "\"3d7e68f5eb6f588693e79091d7b8704b\"")
 

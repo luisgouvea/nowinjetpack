@@ -4,6 +4,7 @@ import com.example.network.BuildConfig
 import com.example.nowinjetpack.core.network.NijNetworkDataSource
 import com.example.nowinjetpack.core.network.model.DeliveryResponse
 import com.example.nowinjetpack.core.network.model.ResultSeriesResponse
+import com.example.nowinjetpack.core.network.model.UserResponse
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
@@ -40,5 +41,8 @@ class RetrofitNijNetwork @Inject constructor(
 
     override suspend fun fetchSeries(id: Int): ResultSeriesResponse =
         networkApi.getComics(id)
+
+    override suspend fun fetchUser(): List<UserResponse> =
+        networkApi.getUsers()
 
 }

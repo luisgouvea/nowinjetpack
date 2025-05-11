@@ -19,12 +19,14 @@ import androidx.compose.runtime.getValue
 fun MarvelRoute(
     viewModel: MarvelViewModel = hiltViewModel()
 ) {
-    val title by viewModel.uiSerieState.collectAsStateWithLifecycle()
+    //val title by viewModel.uiSerieState.collectAsStateWithLifecycle()
+    val title by viewModel.uiUserState.collectAsStateWithLifecycle()
+    title
     MarvelScreen(title)
 }
 
 @Composable
-fun MarvelScreen(text: NewsFeedUiState) {
+fun MarvelScreen(text: UserUiState) {
     Scaffold {
         Box(
             modifier = Modifier
@@ -34,15 +36,15 @@ fun MarvelScreen(text: NewsFeedUiState) {
             contentAlignment = Alignment.Center
         ) {
             when (text) {
-                NewsFeedUiState.Loading -> {
+                UserUiState.Loading -> {
                     CircularProgressIndicator()
                 }
 
-                is NewsFeedUiState.Success -> {
-                    text.feed?.data?.let { listSeries ->
-                        if (listSeries.isNotEmpty()) {
-                            val title = listSeries[0].title
-                            Text(text = title)
+                is UserUiState.Success -> {
+                    text.users?.let { listUsers ->
+                        if (listUsers.isNotEmpty()) {
+                            val name = listUsers[0].name
+                            Text(text = name)
                         }
                     }
                 }
@@ -53,6 +55,6 @@ fun MarvelScreen(text: NewsFeedUiState) {
 
 //@Preview
 @Composable
-fun MarvelScreenPreview(text: NewsFeedUiState) {
+fun MarvelScreenPreview(text: UserUiState) {
     MarvelScreen(text)
 }
