@@ -1,20 +1,23 @@
 package com.example.nowinjetpack.core.data.repository
 
 import com.example.nowinjetpack.core.data.mapper.ResultSeriesMapper
+import com.example.nowinjetpack.core.data.mapper.UserMapper
 import com.example.nowinjetpack.core.model.data.ResultSeries
+import com.example.nowinjetpack.core.model.data.User
 import com.example.nowinjetpack.core.network.NijNetworkDataSource
+import com.example.nowinjetpack.core.network.model.UserResponse
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class SerieRepositoryImpl @Inject constructor(
-    private val mapper: ResultSeriesMapper,
+class UserRepositoryImpl @Inject constructor(
+    private val mapper: UserMapper,
     private val nijNetworkDataSourceImpl: NijNetworkDataSource
-) : SerieRepository {
+) : UserRepository {
 
-    override fun fetchSerie(id: Int): Flow<ResultSeries> = flow {
+    override fun getUser(): Flow<List<User>> = flow {
         emit(
-            mapper.toDomain(nijNetworkDataSourceImpl.fetchSeries(id))
+            mapper.toDomain(nijNetworkDataSourceImpl.fetchUser())
         )
     }
 }

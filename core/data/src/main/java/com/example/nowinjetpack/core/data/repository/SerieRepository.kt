@@ -1,9 +1,10 @@
 package com.example.nowinjetpack.core.data.repository
 
 import com.example.nowinjetpack.core.model.data.ResultSeries
+import kotlinx.coroutines.flow.Flow
 
 interface SerieRepository {
-    suspend fun fetchSerie(
+    fun fetchSerie(
         id: Int
-    ): ResultSeries
+    ): Flow<ResultSeries>
 }

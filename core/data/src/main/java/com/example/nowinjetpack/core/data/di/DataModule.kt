@@ -1,17 +1,32 @@
 package com.example.nowinjetpack.core.data.di
 
-import com.example.nowinjetpack.core.data.mapper.DeliveriesMapper
-import com.example.nowinjetpack.core.data.mapper.ResultSeriesMapper
 import com.example.nowinjetpack.core.data.repository.DeliveriesRepository
 import com.example.nowinjetpack.core.data.repository.DeliveriesRepositoryImpl
 import com.example.nowinjetpack.core.data.repository.SerieRepository
 import com.example.nowinjetpack.core.data.repository.SerieRepositoryImpl
-import org.koin.dsl.module
+import com.example.nowinjetpack.core.data.repository.UserRepository
+import com.example.nowinjetpack.core.data.repository.UserRepositoryImpl
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 
-val dataModule = module {
-    single { DeliveriesMapper() }
-    single { ResultSeriesMapper() }
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class DataModule {
 
-    single<DeliveriesRepository> { DeliveriesRepositoryImpl(get(), get()) }
-    single<SerieRepository> { SerieRepositoryImpl(get(), get()) }
+    @Binds
+    abstract fun bindSerieRepositoryImplHum(
+        serieRepositoryImplNew: SerieRepositoryImpl
+    ): SerieRepository
+
+    @Binds
+    abstract fun bindQualquer(
+        deliveriesRepositoryImpl: DeliveriesRepositoryImpl
+    ): DeliveriesRepository
+
+    @Binds
+    abstract fun bindUserRepository(
+        userRepositoryImpl: UserRepositoryImpl
+    ): UserRepository
 }
