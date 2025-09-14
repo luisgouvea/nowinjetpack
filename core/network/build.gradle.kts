@@ -2,6 +2,8 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -15,9 +17,9 @@ android {
         consumerProguardFiles("consumer-rules.pro")
 
         buildFeatures.buildConfig = true
-        buildConfigField("String", "BASE_URL", "\"https://gateway.marvel.com/\"")
-        buildConfigField("String", "API_PRIVATE", "\"5f017a133f8c9622e6ff5761328e366310c5ddf1\"")
-        buildConfigField("String", "API_PUBLIC", "\"6c9c0da2607c3ff1fbfdbf4da338a98d\"")
+        buildConfigField("String", "BASE_URL", "\"https://jsonplaceholder.typicode.com/\"")
+        buildConfigField("String", "API_PRIVATE", "\"9535d3e8e7f454b7c3971a4df01c4ff17c0065bf\"")
+        buildConfigField("String", "API_PUBLIC", "\"3d7e68f5eb6f588693e79091d7b8704b\"")
 
     }
 
@@ -31,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
@@ -55,13 +57,10 @@ dependencies {
     implementation(libs.retrofit.moshi)
     implementation(libs.retrofit.okhttp3)
 
-    // Koin
-    implementation(libs.koin)
-    implementation(libs.koin.android.compat)
-    implementation(libs.koin.test.junit)
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
-
-    implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)

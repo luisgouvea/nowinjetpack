@@ -40,14 +40,9 @@ dependencies {
     implementation(project(":core:data"))
     implementation(project(":core:model"))
 
-    // Koin
-    implementation(libs.koin)
-    implementation(libs.koin.android.compat)
-    implementation(libs.koin.test.junit)
-    implementation(libs.core.ktx)
+    // Hilt
+    implementation(libs.hilt.android)
 
-
-    implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)

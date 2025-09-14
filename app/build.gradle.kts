@@ -1,11 +1,16 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+    alias(libs.plugins.compose.compiler)
+
 }
 
 android {
     namespace = "com.example.nowinjetpack"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.nowinjetpack"
@@ -27,14 +32,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         viewBinding = true
+        compose = true
     }
 }
 
@@ -46,15 +52,9 @@ dependencies {
 
     // AndroidX
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-//    implementation("androidx.lifecycle:lifecycle-common:2.4.1")
-//    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-//    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
     implementation("androidx.navigation:navigation-fragment-ktx:$navigation_version")
     implementation("androidx.navigation:navigation-ui-ktx:$navigation_version")
-    implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation(project(":core:common"))
     implementation(project(":core:network"))
@@ -62,9 +62,28 @@ dependencies {
     implementation(project(":core:domain"))
     implementation(project(":feature:marvel"))
 
-    // Koin
-    implementation(libs.koin)
-    implementation(libs.koin.android.compat)
-    implementation(libs.koin.test.junit)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    implementation(libs.lifecycle.viewmodel)
+
+    // Compose
+    val composeBom = platform("androidx.compose:compose-bom:2025.01.01")
+    implementation(composeBom)
+    api(libs.androidx.compose.material3)
+    api(libs.androidx.compose.ui.tooling.preview)
+    debugApi(libs.androidx.compose.ui.tooling)
+    implementation(libs.activity.compose)
+    implementation(libs.androidx.lifecycle.runtimeCompose)
+    implementation(libs.androidx.lifecycle.viewModelCompose)
+    implementation(libs.androidx.compose.runtime)
+
+}
+
+kapt {
+    correctErrorTypes = true
 }

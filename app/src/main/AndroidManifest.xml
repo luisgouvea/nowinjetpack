@@ -38,12 +38,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <provider
-            android:name=".AppInitialization"
-            android:authorities="${applicationId}.AppInitialization"
-            android:enabled="true"
-            android:exported="false" />
     </application>
 
 </manifest>
